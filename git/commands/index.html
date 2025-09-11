@@ -535,12 +535,11 @@
 
 
 <h1 id="git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5.45 5.154A4.25 4.25 0 0 0 9.25 7.5h1.378a2.251 2.251 0 1 1 0 1.5H9.25A5.73 5.73 0 0 1 5 7.123v3.505a2.25 2.25 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.95-.218M4.25 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m8.5-4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M5 3.25a.75.75 0 1 0 0 .005z"/></svg></span> Основные команды Git</h1>
-<p><img alt="Плакиплаки" src="../../images/folders.jpg" /></p>
 <h2 id="1">1. Создание репозитория</h2>
 <p>Это то, с чего начнется ваша работа с гитом. У вас есть 2 варианта как наколдовать у себя на компьютере гит:</p>
 <ul>
 <li>либо вы ручками его создаете (git init)</li>
-<li>либо "тихо стырил и ушел, называется нашел" - вы клонируете чей-то репозиторий себе </li>
+<li>либо "тихо стырил и ушел, называется нашел" - вы клонируете чей-то репозиторий себе</li>
 </ul>
 <table>
 <thead>
@@ -562,41 +561,41 @@
 </table>
 <hr />
 <h2 id="2">2. Проверка состояния</h2>
-<p>Состояний может быть несколько: </p>
+<p>Состояний может быть несколько:</p>
 <ul>
 <li><strong>Untracked (Неотслеживаемые)</strong></li>
 </ul>
 <p>Файл есть в папке, но Git о нём ничего не знает. Это значит, что или вы добавили новый файл и забыли сказать гиту "следи за ним", или вы намеренно его не отслеживаете (такое тоже имеет место быть)</p>
 <p>Это можно сравнить как если бы к вам в клуб юных списывальщиков пришел новый человек и вам нужно его представить. О нем еще никто не знает</p>
-<p>В такой ситуации команда <code>git status</code> скажем вам:
+<p>В такой ситуации команда <code>git status</code> скажем вам:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Untracked<span class="w"> </span>files:
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
 </span></code></pre></div>
-➡️ Нужно добавить через git add, если хотите, чтобы Git его отслеживал.</p>
+<p>➡️ Нужно добавить через git add, если хотите, чтобы Git его отслеживал.</p>
 <ul>
 <li><strong>Modified (Изменённые)</strong></li>
 </ul>
-<p>Файл уже отслеживается Git, но вы внесли изменения, которые ещё не добавлены в индекс. </p>
-<p>Сравнимо с тем, если человек в клубе юных списывальщиков сменил прическу, вы уже о нем знаете, но надо "обновить" инфу, что 
+<p>Файл уже отслеживается Git, но вы внесли изменения, которые ещё не добавлены в индекс.</p>
+<p>Сравнимо с тем, если человек в клубе юных списывальщиков сменил прическу, вы уже о нем знаете, но надо "обновить" инфу, что
 у него теперь новая прическа</p>
-<p>Вывод команды <code>git status</code>:
+<p>Вывод команды <code>git status</code>:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
 </span></code></pre></div>
-➡️ Чтобы сохранить изменения в будущем коммите, надо сделать git add.</p>
+<p>➡️ Чтобы сохранить изменения в будущем коммите, надо сделать git add.</p>
 <ul>
 <li><strong>Staged (Подготовленные)</strong></li>
 </ul>
-<p>Файл добавлен в индекс (git add), готов к коммиту.
+<p>Файл добавлен в индекс (git add), готов к коммиту.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <ul>
 <li><strong>Committed (Закоммиченные)</strong></li>
 </ul>
-<p>Файл уже сохранён в истории (коммит сделан), изменений нет.
+<p>Файл уже сохранён в истории (коммит сделан), изменений нет.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
-</span></code></pre></div></p>
+</span></code></pre></div>
 <table>
 <thead>
 <tr>
