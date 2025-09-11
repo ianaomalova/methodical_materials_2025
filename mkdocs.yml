@@ -1,6 +1,6 @@
-site_name: "Прикладное программирование"
+site_name: 'Прикладное программирование'
 site_url: https://example.com
-site_description: "Пошаговое руководство по Git"
+site_description: 'Пошаговое руководство по Git'
 theme:
   name: material
 
@@ -11,19 +11,32 @@ theme:
 nav:
   - Главная: index.md
   - Основы Git:
-      - Что такое Git: intro.md
-      - Ветки: branches.md
-      - Мёрджи: merge.md
+      - Что такое Git: git/intro.md
+      - Основные понятия Git: git/concepts.md
+      - Жизненный цикл работы с Git: git/workflow.md
+      - Основные команды Git: git/commands.md
 
-#extra:
-#  social:
-#    - icon: fontawesome/brands/github
-#      link: https://github.com/твоя-ссылка
-#    - icon: fontawesome/solid/pen
-#      link: mailto:your.email@example.com
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 copyright: >
   © 2025 Iana Malova. Курс прикладного программирования 2025 МГТУ "Станин"
 
-#extra_css:
-#  - stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css
