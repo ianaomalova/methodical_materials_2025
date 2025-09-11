@@ -5,15 +5,19 @@
          <lastmod>2025-09-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/</loc>
+         <loc>https://example.com/git/commands/</loc>
          <lastmod>2025-09-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/concepts/</loc>
+         <loc>https://example.com/git/concepts/</loc>
          <lastmod>2025-09-11</lastmod>
     </url>
     <url>
-         <loc>https://example.com/intro/</loc>
+         <loc>https://example.com/git/intro/</loc>
+         <lastmod>2025-09-11</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/git/workflow/</loc>
          <lastmod>2025-09-11</lastmod>
     </url>
 </urlset>
