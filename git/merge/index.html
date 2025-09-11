@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../workflow/">
       
       
-        <link rel="next" href="../concepts/">
+        <link rel="next" href="../revert/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Что такое Git - Прикладное программирование</title>
+        <title>Слияние - Прикладное программирование</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Что такое Git
+              Слияние
             
           </span>
         </div>
@@ -265,19 +265,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
         
   
   
@@ -288,7 +279,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -344,10 +334,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../merge/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -358,6 +357,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -473,38 +473,32 @@
 
 
 
-<h1 id="git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.6 10.59 8.38 4.8l1.69 1.7c-.24.85.15 1.78.93 2.23v5.54c-.6.34-1 .99-1 1.73a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.39-1-1.73V9.41l2.07 2.09c-.07.15-.07.32-.07.5a2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2c-.18 0-.35 0-.5.07L13.93 7.5a1.98 1.98 0 0 0-1.15-2.34c-.43-.16-.88-.2-1.28-.09L9.8 3.38l.79-.78c.78-.79 2.04-.79 2.82 0l7.99 7.99c.79.78.79 2.04 0 2.82l-7.99 7.99c-.78.79-2.04.79-2.82 0L2.6 13.41c-.79-.78-.79-2.04 0-2.82"/></svg></span> Что такое Git и зачем он нужен?</h1>
-<p><img alt="Что такое Git" src="../../images/what.jpg" /></p>
-<p><strong>Git</strong> - <em>это система контроля версий (система для отслеживания изменений в файлах)</em></p>
-<p>Представьте, что вы делаете лабу по ОП пишете невероятно сложный код:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">sum</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Это ваша первая версия кода (файла)</p>
-<p>После чего, душный преподаватель требует,
-чтобы вы не печатали значение функции на экране,
-а возвращали его из функции, и вы переписываете код следующим образом:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">sum</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</span></code></pre></div>
-<p>Это ваша вторая версия файла</p>
-<p>А теперь представьте, что душный преподаватель передумал и сказал: "Хотя нет, верни как было в 1й раз"</p>
-<p>А дальше представьте, что код, который вы писали, был не 4 строки кода, а 400. И так как вы не сохраняли прошлую
-версию файла, то вам придется вручную заново вспоминать и писать все эти 400 строк кода.</p>
-<p>Звучит больно, но если вы предусмотрительный студент, то вы могли взять и сохранить у себя где-то первую версию кода.</p>
-<p>Какие варианты для этого могут быть?</p>
-<p>Первый, самый банальный: это сделать дубликат файла и писать новую версию кода в копии, а оригинал оставить как есть</p>
-<p>Второй - это если вы шарите и используете ту самую, систему контроля версий Git. Теперь вам не нужно вручную копировать
-и плодить 100500 версий папок и файлов. Вы делегируете эту задачу гиту, который может
-"фотографировать" каждую новую версию файла, даже если таких версий будут тысячи.</p>
-<p>В свою очередь, вы сможете через удобные инструменты
-смотреть на все эти версии, откатываться к прошлым версиям и работать в команде</p>
-<p>Итого каким сверхразумом быть в своих проектах выбор за вами, но на ПП придется сквозь боль и слезы остановиться на первом варианте:</p>
-<p><img alt="Сверхразум" src="../../images/mem-history.jpg" /></p>
+<h1 id="_1">Как работает слияние и как работать с ветками</h1>
+<p>Представим, что Егор Б. осознал, что опасно писать код сразу в главной ветке. Ему нужно создать какую-то копию текущего проекта, но чтобы изменения не ломали главную, стабильно работающую ветку.</p>
+<p>Для этого Егор Б., используя команду <code>git checkout -b my-new-wonderful-ideas</code> создает новую ветку и сразу на нее переключается:
+<img alt="Новая ветка" src="../../images/NB1.jpg" /></p>
+<p>Теперь он вносит изменения в файл, меняет имя котика и его поведение:
+<img alt="Новая ветка" src="../../images/NB2.jpg" /></p>
+<p>По старой схеме зальем изменения на удаленный репозиторий и посмотрим на результат в GitHub
+<img alt="Новая ветка" src="../../images/NB3.jpg" /></p>
+<p>В результате у нас появилась новая ветка, с названием <code>my-new-wonderful-ideas</code>, в которой 3 коммита:</p>
+<ul>
+<li>первые 2 были взяты из ветки main в момент создания новой ветке</li>
+<li>третий коммит мы сделали только что</li>
+</ul>
+<p>При этом в ветке main по-прежнему 2 коммита
+<img alt="Новая ветка" src="../../images/NB4.jpg" /></p>
+<p>Что делать, если мы хотим, чтобы изменения из новой ветки добавились в главную ветку?</p>
+<p>Для этого выполняется 2 шага:</p>
+<ul>
+<li>Сначала нам нужно вернуться в ту ветку, в которую мы планируем влить изменения. В нашем случае - это ветка main.
+  Делаем <code>git checkout main</code></li>
+<li>После чего вливаем изменения из новой ветки в main: <code>git merge my-new-wonderful-ideas</code></li>
+</ul>
+<p><img alt="Новая ветка" src="../../images/NB5.jpg" /></p>
+<p>Снова пушим изменения в удаленный репозиторий и смотрим, что стало с веткой main</p>
+<p>Видим, что теперь ветка main также содержит тот самый 3й коммит, который мы делали в другой ветке:
+<img alt="Новая ветка" src="../../images/NB6.jpg" /></p>
 
 
 
