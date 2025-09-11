@@ -1,0 +1,29 @@
+site_name: "Прикладное программирование"
+site_url: https://example.com
+site_description: "Пошаговое руководство по Git"
+theme:
+  name: material
+
+  palette:
+    primary: 'indigo'
+    accent: 'pink'
+
+nav:
+  - Главная: index.md
+  - Основы Git:
+      - Что такое Git: intro.md
+      - Ветки: branches.md
+      - Мёрджи: merge.md
+
+#extra:
+#  social:
+#    - icon: fontawesome/brands/github
+#      link: https://github.com/твоя-ссылка
+#    - icon: fontawesome/solid/pen
+#      link: mailto:your.email@example.com
+
+copyright: >
+  © 2025 Iana Malova. Курс прикладного программирования 2025 МГТУ "Станин"
+
+#extra_css:
+#  - stylesheets/extra.css
