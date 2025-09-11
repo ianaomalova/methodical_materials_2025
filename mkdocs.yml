@@ -1,6 +1,5 @@
 site_name: 'Прикладное программирование'
-site_url: https://example.com
-site_description: 'Пошаговое руководство по Git'
+site_description: 'Методические материалы по курсу прикладного программирования'
 theme:
   name: material
 
@@ -15,6 +14,7 @@ nav:
       - Основные понятия Git: git/concepts.md
       - Жизненный цикл работы с Git: git/workflow.md
       - Основные команды Git: git/commands.md
+      - Инструменты: git/tools.md
 
 markdown_extensions:
   - attr_list
