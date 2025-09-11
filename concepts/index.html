@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://example.com/intro/">
+        <link rel="canonical" href="https://example.com/concepts/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../intro/">
       
       
-        <link rel="next" href="../concepts/">
+        <link rel="next" href="../commands/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Что такое Git - Прикладное программирование</title>
+        <title>Основные понятия Git - Прикладное программирование</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Что такое Git
+              Основные понятия Git
             
           </span>
         </div>
@@ -267,6 +267,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Что такое Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -279,31 +302,20 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   
   <span class="md-ellipsis">
-    Что такое Git
+    Основные понятия Git
     
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -314,6 +326,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Репозиторий (repo)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Коммит (commit)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ветка (branch)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge (слияние)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushpull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push/Pull
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -369,6 +446,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Репозиторий (repo)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Коммит (commit)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ветка (branch)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge (слияние)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushpull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push/Pull
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -383,38 +513,36 @@
 
 
 
-<h1 id="git"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.6 10.59 8.38 4.8l1.69 1.7c-.24.85.15 1.78.93 2.23v5.54c-.6.34-1 .99-1 1.73a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.39-1-1.73V9.41l2.07 2.09c-.07.15-.07.32-.07.5a2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2c-.18 0-.35 0-.5.07L13.93 7.5a1.98 1.98 0 0 0-1.15-2.34c-.43-.16-.88-.2-1.28-.09L9.8 3.38l.79-.78c.78-.79 2.04-.79 2.82 0l7.99 7.99c.79.78.79 2.04 0 2.82l-7.99 7.99c-.78.79-2.04.79-2.82 0L2.6 13.41c-.79-.78-.79-2.04 0-2.82"/></svg></span> Что такое Git и зачем он нужен?</h1>
-<p><img alt="Что такое Git" src="../images/what.jpg" /></p>
-<p><strong>Git</strong> - <em>это система контроля версий (система для отслеживания изменений в файлах)</em></p>
-<p>Представьте, что вы делаете лабу по ОП пишете невероятно сложный код:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">sum</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</span></code></pre></div>
-Это ваша первая версия кода (файла)</p>
-<p>После чего, душный преподаватель требует, 
-чтобы вы не печатали значение функции на экране, 
-а возвращали его из функции, и вы переписываете код следующим образом:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">sum</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</span></code></pre></div>
-Это ваша вторая версия файла</p>
-<p>А теперь представьте, что душный преподаватель передумал и сказал: "Хотя нет, верни как было в 1й раз"</p>
-<p>А дальше представьте, что код, который вы писали, был не 4 строки кода, а 400. И так как вы не сохраняли прошлую
-версию файла, то вам придется вручную заново вспоминать и писать все эти 400 строк кода.</p>
-<p>Звучит больно, но если вы предусмотрительный студент, то вы могли взять и сохранить у себя где-то первую версию кода.</p>
-<p>Какие варианты для этого могут быть?</p>
-<p>Первый, самый банальный: это сделать дубликат файла и писать новую версию кода в копии, а оригинал оставить как есть</p>
-<p>Второй - это если вы шарите и используете ту самую, систему контроля версий Git. Теперь вам не нужно вручную копировать
-и плодить 100500 версий папок и файлов. Вы делегируете эту задачу гиту, который может
-"фотографировать" каждую новую версию файла, даже если таких версий будут тысячи. </p>
-<p>В свою очередь, вы сможете через удобные инструменты 
-смотреть на все эти версии, откатываться к прошлым версиям и работать в команде (об этом поговорим чуть позже)</p>
-<p>Итого каким сверхразумом быть в своих проектах выбор за вами, но на ПП придется сквозь боль и слезы остановиться на первом варианте: </p>
-<p><img alt="Сверхразум" src="../images/mem-history.jpg" /></p>
+<h1 id="git">Основные понятия Git</h1>
+<h3 id="repo">Репозиторий (repo)</h3>
+<p>Это папка, в которой Git хранит проект и его историю. </p>
+<p>Представьте себе чемоданчик, в котором лежит весь ваш проект и его история.</p>
+<ul>
+<li><strong>Локальный репозиторий</strong> — чемоданчик у вас дома на компе.</li>
+<li><strong>Удалённый репозиторий</strong> — чемоданчик в облаке (например, на GitHub), куда можно заглянуть и другим.</li>
+</ul>
+<h3 id="commit">Коммит (commit)</h3>
+<p>Сохранённая версия проекта с описанием изменений. Это как сделать <strong>фотографию проекта</strong> 📷</p>
+<p>Вы сохраняете снимок того, как выглядит ваш код в данный момент, и подписываете его:<br />
+<em>"Добавил кнопку входа"</em> или <em>"Исправил баг с котиками"</em>.</p>
+<p>Это позволяет всегда вернуться к старому фото, если новое вышло кривым.</p>
+<h3 id="branch">Ветка (branch)</h3>
+<p>Ветки — это как <strong>параллельные версии</strong> вашего проекта.
+Вы можете сделать несколько веток
+работы над проектом. Например, в главной ветке у вас будет стабильно
+работающая версия кода. Вы можете сделать некую параллельную копию main
+и писать код в этой ветке, не боясь повредить стабильно работающую версию</p>
+<p><img alt="Ветки" src="../images/branches.webp" /></p>
+<h3 id="merge">Merge (слияние)</h3>
+<p>Берём код из одной ветки и аккуратно объединяем его с другой.<br />
+Например: <em>"берём классные фичи из <code>dev</code> и добавляем их в <code>main</code>"</em>.</p>
+<p>Взяли стакан с вод(к)ой и добавили в него сок. </p>
+<h3 id="pushpull">Push/Pull</h3>
+<ul>
+<li><strong>Push</strong> — это как выложить свои фотки в Instagram: код был у вас локально, а теперь улетел в интернет (на GitHub).</li>
+<li><strong>Pull</strong> — это наоборот: вы тянете свежие фотки из Instagram себе в телефон. Если группаш запостил новый код — вы его забираете.  </li>
+</ul>
+<p><img alt="Pull push" src="../images/pullpush.png" /></p>
 
 
 
