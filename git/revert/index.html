@@ -416,6 +416,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Reset&#39;ы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-soft-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --soft HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-mixed-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --mixed HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-hard-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --hard HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -522,6 +555,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Reset&#39;ы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-soft-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --soft HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-mixed-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --mixed HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-reset-hard-head1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git reset --hard HEAD~1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -554,31 +620,21 @@
 <p>Откатить изменения!</p>
 <h3 id="reset">Reset'ы</h3>
 <p>Формально есть 3 варианта это сделать:</p>
-<ul>
-<li><code>git reset --soft HEAD~1</code></li>
-</ul>
+<h4 id="git-reset-soft-head1"><code>git reset --soft HEAD~1</code></h4>
 <p>Эта команда откатывает коммит, но сохраняет все изменения в staging (индексе).</p>
 <ul>
 <li>История перематывается на коммит назад</li>
 <li>Файлы остаются отмеченными как “готовые к коммиту”</li>
-<li>
-<p>Удобно, если нужно переделать коммит (например, исправить сообщение или добавить ещё изменения)</p>
-</li>
-<li>
-<p><code>git reset --mixed HEAD~1</code></p>
-</li>
+<li>Удобно, если нужно переделать коммит (например, исправить сообщение или добавить ещё изменения)</li>
 </ul>
+<h4 id="git-reset-mixed-head1"><code>git reset --mixed HEAD~1</code></h4>
 <p>Эта команда откатывает коммит и сохраняет изменения только в рабочей папке (working directory), но убирает их из staging.</p>
 <ul>
 <li>История перематывается</li>
 <li>Изменения в файлах остаются, но они как будто только что сделаны, не добавлены в индекс</li>
-<li>
-<p>Удобно, если хочется переписать коммит, но самому решить, что снова добавлять в git add</p>
-</li>
-<li>
-<p><code>git reset --hard HEAD~1</code></p>
-</li>
+<li>Удобно, если хочется переписать коммит, но самому решить, что снова добавлять в git add</li>
 </ul>
+<h4 id="git-reset-hard-head1"><code>git reset --hard HEAD~1</code></h4>
 <p>Самый жёсткий вариант — полный откат.</p>
 <ul>
 <li>История перематывается</li>
