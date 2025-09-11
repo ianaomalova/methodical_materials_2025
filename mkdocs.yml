@@ -13,6 +13,8 @@ nav:
       - Что такое Git: git/intro.md
       - Основные понятия Git: git/concepts.md
       - Жизненный цикл работы с Git: git/workflow.md
+      - Слияние: git/merge.md
+      - Откат версии: git/revert.md
       - Основные команды Git: git/commands.md
       - Инструменты: git/tools.md
 
