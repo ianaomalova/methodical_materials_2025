@@ -12,10 +12,12 @@ nav:
   - Основы Git:
       - Что такое Git: git/intro.md
       - Основные понятия Git: git/concepts.md
+      - Глобальная установка Git: git/install.md
       - Жизненный цикл работы с Git: git/workflow.md
       - Слияние: git/merge.md
       - Откат версии: git/revert.md
       - Основные команды Git: git/commands.md
+      - Что такое .gitignore: git/ignore.md
       - Инструменты: git/tools.md
 
 markdown_extensions:
@@ -38,7 +40,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 copyright: >
-  © 2025 Iana Malova. Курс прикладного программирования 2025 МГТУ "Станин"
+  © 2025 Iana Malova. Курс прикладного программирования 2025 МГТУ "Станкин"
 
 extra_css:
   - stylesheets/extra.css

@@ -14,7 +14,7 @@
         <link rel="prev" href="../concepts/">
       
       
-        <link rel="next" href="../commands/">
+        <link rel="next" href="../merge/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -424,6 +424,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../merge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Слияние
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Откат версии
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         
   
@@ -580,6 +626,41 @@
 <p>Пустой вывод после выполнения команды говорит о том, что все прошло хорошо.</p>
 <p>Посмотрим, что теперь говорит статус:
 <img alt="WF5" src="../../images/wf5.jpg" /></p>
+<p>Состояний может быть несколько:</p>
+<ul>
+<li><strong>Untracked (Неотслеживаемые)</strong></li>
+</ul>
+<p>Файл есть в папке, но Git о нём ничего не знает. Это значит, что или вы добавили новый файл и забыли сказать гиту "следи за ним", или вы намеренно его не отслеживаете (такое тоже имеет место быть)</p>
+<p>Это можно сравнить как если бы к вам в клуб юных списывальщиков пришел новый человек и вам нужно его представить. О нем еще никто не знает</p>
+<p>В такой ситуации команда <code>git status</code> скажем вам:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Untracked<span class="w"> </span>files:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+</span></code></pre></div>
+<p>➡️ Нужно добавить через git add, если хотите, чтобы Git его отслеживал.</p>
+<ul>
+<li><strong>Modified (Изменённые)</strong></li>
+</ul>
+<p>Файл уже отслеживается Git, но вы внесли изменения, которые ещё не добавлены в индекс.</p>
+<p>Сравнимо с тем, если человек в клубе юных списывальщиков сменил прическу, вы уже о нем знаете, но надо "обновить" инфу, что
+у него теперь новая прическа</p>
+<p>Вывод команды <code>git status</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+</span></code></pre></div>
+<p>➡️ Чтобы сохранить изменения в будущем коммите, надо сделать git add.</p>
+<ul>
+<li><strong>Staged (Подготовленные)</strong></li>
+</ul>
+<p>Файл добавлен в индекс (git add), готов к коммиту.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Committed (Закоммиченные)</strong></li>
+</ul>
+<p>Файл уже сохранён в истории (коммит сделан), изменений нет.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</span></code></pre></div>
 <p>Отлично, теперь файлы отслеживаются гитом и мы можем их закоммитить.</p>
 <p>Для этого воспользуемся командой <code>git commit -m "Здесь может быть любой текст, описывающий, какие изменения вы внесли в файлы"</code>
 <img alt="WF6" src="../../images/wf6.jpg" /></p>
@@ -607,6 +688,16 @@
 <p>Теперь если вы посмотрите в ваш репозиторий в гитхабе, вы увидите этот самый коммит:
 <img alt="GH6" src="../../images/gh6.jpg" /></p>
 <p>Поздравляю, теперь вы можете гордо отправить лабу на проверку преподу.</p>
+<div style="display: flex; align-items: flex-start; gap: 15px;">
+  <div>
+    Если вам стало смешно с мема, поздравляю, вы почти изучили Git.<br>
+    Если мем не понят, вернитесь к началу страницы и перечитайте команды.
+  </div>
+  <div>
+    <img src="/images/empty.webp" alt="Плакиплаки" style="max-width:450px;">
+  </div>
+</div>
+
 <h3 id="_2">Исправление багов</h3>
 <p>Но что делать, если вы обнаружили ошибку в коде? Например, лишнее слово "Alex" после названия переменной</p>
 <p>Не беда, некий Егор Б. берет и удаляет из файла лишнее. После этого файл окрашивается в оранжевый цвет, а статус говорит о том, что у нас есть модифицированный файл:
