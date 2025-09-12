@@ -11,8 +11,10 @@
       
       
       
-        <link rel="prev" href="../commands/">
+        <link rel="prev" href="../revert/">
       
+      
+        <link rel="next" href="../commands/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Инструменты - Прикладное программирование</title>
+        <title>Что такое .gitignore - Прикладное программирование</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#gitignore" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Инструменты
+              Что такое .gitignore
             
           </span>
         </div>
@@ -401,10 +403,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ignore/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Что такое .gitignore
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -415,6 +439,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Зачем нужен файл игнора
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitignore_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как работает .gitignore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как может выглядеть содержимое файла
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -447,32 +518,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Инструменты
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -483,62 +532,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#jetbrains" class="md-nav__link">
-    <span class="md-ellipsis">
-      Инструменты JetBrains
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Инструменты VSCode
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Десктопные решения
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diff" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diff
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -578,18 +571,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jetbrains" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Инструменты JetBrains
+      Зачем нужен файл игнора
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
+  <a href="#gitignore_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Инструменты VSCode
+      Как работает .gitignore
     </span>
   </a>
   
@@ -598,16 +591,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Десктопные решения
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diff" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diff
+      Как может выглядеть содержимое файла
     </span>
   </a>
   
@@ -629,28 +613,41 @@
 
 
 
-<h1 id="_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z"/></svg></span> Как можно пользоваться гитом?</h1>
-<p>На самом деле помимо ввода команд в консоли, можно использовать различные UI инструменты.</p>
-<h3 id="jetbrains">Инструменты JetBrains</h3>
-<p>Например, среды разработки от JetBrains имеют очень удобный визуал для работы с гитом:
-<img alt="JB" src="../../images/JBUI.jpg" /></p>
-<p>Слева сверху отображаются файлы, которые были изменены. Выбором чекбоксов и вводом текста, можно закоммитить файлы без необходимости ввода команд в консоль.</p>
-<p>Снизу отображаются ветки проекта и коммиты, сделанные в текущей ветке.</p>
-<p>Запушить или обновить проект можно также через UI:
-<img alt="JB" src="../../images/JBUI2.jpg" /></p>
-<h3 id="vscode">Инструменты VSCode</h3>
-<p>Редакторы кода наподобие VSCode также имеют UI для работы с гитом:</p>
-<p>Слева отображаются встроенные функции работы с гитом, снизу дополнительное бесплатное расширение <strong>GitLens</strong></p>
-<p><img alt="VS" src="../../images/VSUI1.jpg" /></p>
-<h3 id="_2">Десктопные решения</h3>
-<p>Также есть различные десктопные приложения, например GitHub Desktop:
-<img alt="Desktop" src="../../images/DesktopGit.jpg" /></p>
-<p>Выбор каким по итогу решением пользоваться за вами</p>
-<h3 id="diff">Diff</h3>
-<p>При этом в UI инструментах присутствует удобный просмотр изменений по текущему файлу. Например, JetBrains:
-<img alt="Diff" src="../../images/diff1.jpg" /></p>
-<p>Подобное можно посмотреть и в консоли, однако это менее наглядно:
-<img alt="Diff" src="../../images/diff2.jpg" /></p>
+<h1 id="gitignore">Зачем нужен файл .gitignore</h1>
+<h3 id="_1">Зачем нужен файл игнора</h3>
+<p>Когда мы работаем с Git, он отслеживает все изменения файлов в репозитории.</p>
+<p>Но иногда есть файлы, которые не нужно хранить в истории:
+- временные файлы редакторов
+- логи
+- пароли (секреты)
+- большие бинарные файлы
+- папки с собранным кодом (build)</p>
+<p>Для этого используется файл .gitignore.</p>
+<h3 id="gitignore_1">Как работает .gitignore</h3>
+<p>Это обычный текстовый файл в корне проекта, в котором указываются шаблоны файлов и папок, которые нужно игнорировать.
+Т.е Git просто перестаёт добавлять их в staging и коммиты</p>
+<h3 id="_2">Как может выглядеть содержимое файла</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Игнорировать папку build/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>build/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a># Игнорировать все файлы с расширением .log
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>*.log
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a># Игнорировать системные файлы macOS
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>.DS_Store
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a># Игнорировать виртуальное окружение Python
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>venv/
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a># Игнорировать node_modules в JS-проектах
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>node_modules/
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a># Игнорировать секретные файлы
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>config.local.json
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>.env
+</span></code></pre></div>
+<p>Если вы не укажете какой-то файл в гитигноре, то есть шанс, что рано или поздно вы его случайно запушите в удаленный репозиторий, где его смогут увидеть.</p>
+<p>Если это файл с секретными ключами, то их спокойно смогут утащить и воспользоваться.</p>
 
 
 
