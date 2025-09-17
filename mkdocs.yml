@@ -16,9 +16,12 @@ nav:
       - Жизненный цикл работы с Git: git/workflow.md
       - Слияние: git/merge.md
       - Откат версии: git/revert.md
-      - Основные команды Git: git/commands.md
       - Что такое .gitignore: git/ignore.md
+      - Основные команды Git: git/commands.md
       - Инструменты: git/tools.md
+  - PyQt:
+      - Основы PyQt: PyQt/intro.md
+      - Проект "Мемные HTTP-статусы: PyQt/project.md
 
 markdown_extensions:
   - attr_list
