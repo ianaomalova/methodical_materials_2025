@@ -568,6 +568,97 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PyQt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PyQt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQt/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Введение
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQt/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Разбор проекта
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -691,8 +782,8 @@
 <p>Все три варианта reset (--soft, --mixed, --hard) меняют только локальную историю. То есть ветка у тебя на компе сдвигается на старый коммит, а на GitHub (или GitLab) пока остаётся как была.</p>
 <p>Что делать, чтобы заставить историю переписаться и на сервере?</p>
 <p>Ответ:
-<img alt="Force" src="../../images/force.webp" />
-<img alt="Force" src="../../images/force2.jpeg" /></p>
+<img alt="Force" src="../../images/git/force.webp" />
+<img alt="Force" src="../../images/git/force2.jpeg" /></p>
 <p><strong>Но помните, если вы работаете не одни, то если кто-то уже успел забрать старую ветку и сделать свои коммиты, при следующем git pull у них начнётся ад с конфликтами</strong></p>
 <h3 id="revert">Revert</h3>
 <p>Когда переписывать историю опасно (особенно если проект общий и на проде), то вместо этого можно использовать <code>git revert</code></p>
@@ -703,9 +794,9 @@
 <li>Если опозорился на проде и все уже увидели его любовь к 25 — лучше revert</li>
 </ul>
 <p>Но если он не хочет, чтобы история помнила его позор, то делаем reset hard:</p>
-<p><img alt="Reset" src="../../images/force3.jpg" /></p>
+<p><img alt="Reset" src="../../images/git/force3.jpg" /></p>
 <p>После этого и локальная история, и история на сервере забудут про любовь Егора Б. к 25
-<img alt="Reset" src="../../images/reserhard.webp" /></p>
+<img alt="Reset" src="../../images/git/reserhard.webp" /></p>
 
 
 
