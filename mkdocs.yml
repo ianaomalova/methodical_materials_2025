@@ -20,8 +20,8 @@ nav:
       - Основные команды Git: git/commands.md
       - Инструменты: git/tools.md
   - PyQt:
-      - Основы PyQt: PyQt/intro.md
-      - Проект "Мемные HTTP-статусы: PyQt/project.md
+      - Введение: PyQt/intro.md
+      - Разбор проекта: PyQt/project.md
 
 markdown_extensions:
   - attr_list

@@ -38,8 +38,8 @@
 Что делать, чтобы заставить историю переписаться и на сервере?
 
 Ответ:
-![Force](../images/force.webp)
-![Force](../images/force2.jpeg)
+![Force](../images/git/force.webp)
+![Force](../images/git/force2.jpeg)
 
 **Но помните, если вы работаете не одни, то если кто-то уже успел забрать старую ветку и сделать свои коммиты, при следующем git pull у них начнётся ад с конфликтами**
 
@@ -56,7 +56,7 @@
 
 Но если он не хочет, чтобы история помнила его позор, то делаем reset hard:
 
-![Reset](../images/force3.jpg)
+![Reset](../images/git/force3.jpg)
 
 После этого и локальная история, и история на сервере забудут про любовь Егора Б. к 25
-![Reset](../images/reserhard.webp)
+![Reset](../images/git/reserhard.webp)

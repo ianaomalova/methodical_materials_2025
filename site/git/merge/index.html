@@ -485,6 +485,97 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PyQt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PyQt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQt/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Введение
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PyQt/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Разбор проекта
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -522,33 +613,33 @@
 <h1 id="_1">Как работает слияние и как работать с ветками</h1>
 <p>Представим, что Егор Б. осознал, что опасно писать код сразу в главной ветке. Ему нужно создать какую-то копию текущего проекта, но чтобы изменения не ломали главную, стабильно работающую ветку.</p>
 <p>Для этого Егор Б., используя команду <code>git checkout -b my-new-wonderful-ideas</code> создает новую ветку и сразу на нее переключается:
-<img alt="Новая ветка" src="../../images/NB1.jpg" /></p>
+<img alt="Новая ветка" src="../../images/git/NB1.jpg" /></p>
 <p>Теперь он вносит изменения в файл, меняет имя котика и его поведение:
-<img alt="Новая ветка" src="../../images/NB2.jpg" /></p>
+<img alt="Новая ветка" src="../../images/git/NB2.jpg" /></p>
 <p>По старой схеме зальем изменения на удаленный репозиторий и посмотрим на результат в GitHub
-<img alt="Новая ветка" src="../../images/NB3.jpg" /></p>
+<img alt="Новая ветка" src="../../images/git/NB3.jpg" /></p>
 <p>В результате у нас появилась новая ветка, с названием <code>my-new-wonderful-ideas</code>, в которой 3 коммита:</p>
 <ul>
 <li>первые 2 были взяты из ветки main в момент создания новой ветке</li>
 <li>третий коммит мы сделали только что</li>
 </ul>
 <p>При этом в ветке main по-прежнему 2 коммита
-<img alt="Новая ветка" src="../../images/NB4.jpg" /></p>
+<img alt="Новая ветка" src="../../images/git/NB4.jpg" /></p>
 <p>Что делать, если мы хотим, чтобы изменения из новой ветки добавились в главную ветку?</p>
-<p><img alt="Merge master" src="../../images/mergemaster.jpeg" /></p>
+<p><img alt="Merge master" src="../../images/git/mergemaster.jpeg" /></p>
 <p>Для этого выполняется 2 шага:</p>
 <ul>
 <li>Сначала нам нужно вернуться в ту ветку, в которую мы планируем влить изменения. В нашем случае - это ветка main.
   Делаем <code>git checkout main</code></li>
 <li>После чего вливаем изменения из новой ветки в main: <code>git merge my-new-wonderful-ideas</code></li>
 </ul>
-<p><img alt="Новая ветка" src="../../images/NB5.jpg" /></p>
+<p><img alt="Новая ветка" src="../../images/git/NB5.jpg" /></p>
 <p>Снова пушим изменения в удаленный репозиторий и смотрим, что стало с веткой main</p>
 <p>Видим, что теперь ветка main также содержит тот самый 3й коммит, который мы делали в другой ветке:
-<img alt="Новая ветка" src="../../images/NB6.jpg" /></p>
+<img alt="Новая ветка" src="../../images/git/NB6.jpg" /></p>
 <p>Но помните, что если 2 ветки какое-то время разрабатывались параллельно и меняли содержимое одних и тех же файлов, то мердж этих веток 
 может быть крайне болезненным.</p>
-<p><img alt="Merge master" src="../../images/mergebum.jpg" /></p>
+<p><img alt="Merge master" src="../../images/git/mergebum.jpg" /></p>
 
 
 
