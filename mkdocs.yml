@@ -22,6 +22,7 @@ nav:
   - PyQt:
       - Введение: PyQt/intro.md
       - Разбор проекта: PyQt/project.md
+  - Принципы ООП (SOLID, DRY, KISS, YAGNI): principes/principes.md
 
 markdown_extensions:
   - attr_list
